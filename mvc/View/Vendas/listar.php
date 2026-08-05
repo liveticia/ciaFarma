@@ -7,7 +7,7 @@ if (empty($vendas)) {
 }
 
 echo "<table border='1' cellpadding='5' cellspacing='0'>";
-echo "<tr><td><a href='View/Vendas/cadastrar.php'>Cadastrar</a></td></tr>";
+echo "<tr><td><a class='btn btn-primary' href='View/Vendas/cadastrar.php'>Cadastrar</a></td></tr>";
 echo "<tr><th>ID</th><th>Medicamento</th><th>Quantidade</th><th>Valor Total</th><th>Ações</th></tr>";
 
 foreach ($vendas as $venda) {
@@ -18,8 +18,8 @@ foreach ($vendas as $venda) {
     echo "<td>{$venda['quantidade']}</td>";
     echo "<td>{$venda['valor_total']}</td>";
     echo "<td>
-                 <a href='View/Vendas/editar.php?id={$id}'>Editar</a> |
-                <a href='View/Vendas/deletar.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir esta venda?')\">Deletar</a>
+                 <a class='btn btn-secondary' href='View/Vendas/editar.php?id={$id}'>Editar</a> |
+                <a class='btn btn-danger' href='View/Vendas/deletar.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir esta venda?')\">Deletar</a>
             </td>";
     echo "</tr>";
 }

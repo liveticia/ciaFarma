@@ -14,7 +14,8 @@ if(isset($_GET['id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Medicamentos</title>
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <title>Editar Medicamento</title>
 </head>
 <body>
     <form method="post">
