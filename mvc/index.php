@@ -7,10 +7,9 @@
      <title>Dashboard</title>
 
      <h1>Dashboard</h1>
+
+     
    
-</head>
-<body>
-    
 </body>
 </html>
 
@@ -19,7 +18,9 @@ require_once "DB/Database.php";
 require_once "Controller/MedicamentoController.php";
 require_once "Controller/FabricantesController.php";
 require_once "Controller/VendasController.php";
+require_once "Controller/DashboardController.php";
 
+$controller = new DashboardController();
 $medicamentoController = new MedicamentoController($pdo);
 $fabricanteController = new FabricanteController($pdo);
 $vendasController = new VendasController($pdo);
@@ -27,3 +28,4 @@ $vendasController = new VendasController($pdo);
 $medicamentos = $medicamentoController->listar();
 $fabricantes = $fabricanteController->listar();
 $vendas = $vendasController->listar();
+$dados = $controller->index();
