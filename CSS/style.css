@@ -23,36 +23,6 @@ a {
     margin: auto;
 }
 
-nav {
-    background: #fff;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
-}
-
-nav h1 {
-    color: #00C794;
-    font-size: 28px;
-    font-weight: 700;
-}
-
-nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-nav ul li a {
-    font-weight: 500;
-    transition: .3s;
-}
-
-nav ul li a:hover {
-    color: #008CB8;
-}
 
 .btn {
     padding: 11px 22px;
@@ -89,11 +59,13 @@ nav ul li a:hover {
 
     padding: 25px;
 
-    margin: 20px 0;
+    margin: 20px auto;
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
 
     transition: .3s;
+
+    width: 80%;
 }
 
 .card:hover {
@@ -189,6 +161,10 @@ h1{
     color: #EE2BC1;
     margin: 30px;
     text-align: center;
+}
+
+h2{
+    color: #008CB8;
 }
 
 form {
