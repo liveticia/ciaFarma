@@ -32,6 +32,11 @@ class VendasController {
         return $venda;
     }
 
+    public function contar()
+{
+    return $this->vendasModel->contar();
+}
+
 }
 
 

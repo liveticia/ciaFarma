@@ -5,7 +5,16 @@ if (empty($medicamentos)) {
     echo "<a href='View/Medicamento/cadastrar.php'>Cadastrar</a>";
     return;
 }
+?>
 
+<form method="GET">
+    <input type="text" name="pesquisa" placeholder="Pesquisar medicamento..."
+           value="<?= $_GET['pesquisa'] ?? '' ?>">
+
+    <button class="btn btn-primary pesquisa" type="submit">Pesquisar</button>
+</form>
+
+<?php
 echo "<table border='1' cellpadding='5' cellspacing='0'>";
 echo "<tr><td><a class='btn btn-primary' href='View/Medicamento/cadastrar.php'>Cadastrar</a></td></tr>";
 echo "<tr><th>ID</th><th>Nome</th><th>Preço</th><th>Fabricante ID</th><th>Ações</th></tr>";

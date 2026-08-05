@@ -32,6 +32,11 @@ class FabricanteController {
         return $fabricante;
     }
 
+    public function contar()
+{
+    return $this->fabricanteModel->contar();
+}
+
 }
 
 

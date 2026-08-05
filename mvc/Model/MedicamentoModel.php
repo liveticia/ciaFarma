@@ -35,5 +35,26 @@ class MedicamentoModel {
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([$id]);
     }
+
+    public function pesquisar($palavra)
+{
+    $sql = $this->pdo->prepare("
+        SELECT *
+        FROM medicamentos
+        WHERE nome LIKE ?
+    ");
+
+    $sql->execute(["%$palavra%"]);
+
+    return $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
+public function contar()
+{
+    $sql = $this->pdo->query("SELECT COUNT(*) AS total FROM medicamentos");
+    $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $resultado['total'];
+}
     
 }

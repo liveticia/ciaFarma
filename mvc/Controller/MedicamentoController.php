@@ -32,6 +32,17 @@ class MedicamentoController {
         return $medicamento;
     }
 
+    public function pesquisar($palavra)
+{
+    $medicamentos = $this->medicamentoModel->pesquisar($palavra);
+    include_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/View/Medicamento/listar.php";
+    return;
+}
+
+public function contar()
+{
+    return $this->medicamentoModel->contar();
+}
 }
 
 

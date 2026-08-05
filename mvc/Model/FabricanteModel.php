@@ -36,4 +36,12 @@ class FabricanteModel {
         return $stmt->execute([$id]);
     }
     
+    public function contar()
+{
+    $sql = $this->pdo->query("SELECT COUNT(*) AS total FROM fabricantes");
+    $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $resultado['total'];
+}
+    
 }

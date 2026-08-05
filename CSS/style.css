@@ -208,3 +208,10 @@ form {
     box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 
 }
+button {
+
+margin:0 auto;
+    display: flex;
+    align-items: center;
+
+}

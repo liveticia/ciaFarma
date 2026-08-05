@@ -61,4 +61,13 @@ public function faturamento()
     $sql = $this->pdo->query("SELECT SUM(valor_total) as total FROM vendas");
     return $sql->fetch()['total'];
 }
+
+public function contar()
+{
+    $sql = $this->pdo->query("SELECT COUNT(*) AS total FROM vendas");
+    $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $resultado['total'];
+}
+    
 }

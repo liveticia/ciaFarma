@@ -18,14 +18,41 @@ require_once "DB/Database.php";
 require_once "Controller/MedicamentoController.php";
 require_once "Controller/FabricantesController.php";
 require_once "Controller/VendasController.php";
-require_once "Controller/DashboardController.php";
 
-$controller = new DashboardController();
 $medicamentoController = new MedicamentoController($pdo);
 $fabricanteController = new FabricanteController($pdo);
 $vendasController = new VendasController($pdo);
 
-$medicamentos = $medicamentoController->listar();
+if(isset($_GET['pesquisa']) && $_GET['pesquisa'] != "")
+{
+    $medicamentos = $medicamentoController->pesquisar($_GET['pesquisa']);
+}
+else
+{
+    $medicamentos = $medicamentoController->listar();
+}
 $fabricantes = $fabricanteController->listar();
 $vendas = $vendasController->listar();
-$dados = $controller->index();
+
+$totalMedicamentos = $medicamentoController->contar();
+$totalFabricantes = $fabricanteController->contar();
+$totalVendas = $vendasController->contar();
+?>
+<div class="cards">
+
+    <div class="card">
+        <h2>Medicamentos</h2>
+        <p><?= $totalMedicamentos ?></p>
+    </div>
+
+    <div class="card">
+        <h2>Fabricantes</h2>
+        <p><?= $totalFabricantes ?></p>
+    </div>
+
+    <div class="card">
+        <h2>Vendas</h2>
+        <p><?= $totalVendas ?></p>
+    </div>
+
+</div>
