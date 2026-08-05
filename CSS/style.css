@@ -183,18 +183,12 @@ tr:hover {
 
 }
 
-h1 {
-    font-size: 34px;
-    color: #00C794;
-}
 
-h2 {
-    color: #008CB8;
-    margin-bottom: 20px;
-}
 
-h3 {
+h1{
     color: #EE2BC1;
+    margin: 30px;
+    text-align: center;
 }
 
 form {
