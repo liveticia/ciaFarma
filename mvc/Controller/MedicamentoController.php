@@ -1,5 +1,5 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/farmacia/mvc/Model/MedicamentoModel.php";
+require_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/Model/MedicamentoModel.php";
 class MedicamentoController {
     private $medicamentoModel;
    
@@ -9,7 +9,7 @@ class MedicamentoController {
     }
     public function listar() {
         $medicamentos = $this->medicamentoModel->buscarTodos();
-        include_once "C:/Turma2/xampp/htdocs/farmacia/mvc/View/Medicamento/listar.php";
+        include_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/View/Medicamento/listar.php";
         return;
     }
 

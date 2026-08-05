@@ -1,7 +1,7 @@
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/farmacia/mvc/DB/Database.php";
-require_once "C:/Turma2/xampp/htdocs/farmacia/mvc/Controller/VendasController.php";
+require_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/DB/Database.php";
+require_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/Controller/VendasController.php";
 
 $VendasController = new VendasController($pdo);
 

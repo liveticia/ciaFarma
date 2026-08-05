@@ -23,8 +23,8 @@
 
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/farmacia/mvc/DB/Database.php";
-require_once "C:/Turma2/xampp/htdocs/farmacia/mvc/Controller/MedicamentoController.php";
+require_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/DB/Database.php";
+require_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/Controller/MedicamentoController.php";
 
 $MedicamentoController = new MedicamentoController($pdo);
 

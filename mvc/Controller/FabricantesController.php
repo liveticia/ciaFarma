@@ -1,5 +1,5 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/farmacia/mvc/Model/FabricanteModel.php";
+require_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/Model/FabricanteModel.php";
 class FabricanteController {
     private $fabricanteModel;
    
@@ -9,7 +9,7 @@ class FabricanteController {
     }
     public function listar() {
         $fabricantes = $this->fabricanteModel->buscarTodos();
-        include_once "C:/Turma2/xampp/htdocs/farmacia/mvc/View/Fabricante/listar.php";
+        include_once "C:/Turma2/xampp/htdocs/ciaFarma/mvc/View/Fabricante/listar.php";
         return;
     }
 
